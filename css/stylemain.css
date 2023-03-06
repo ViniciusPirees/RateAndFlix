@@ -1,0 +1,1557 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+html {
+  background: rgb(28, 32, 32);
+}
+
+body {
+  height: 100%;
+  background: rgb(28, 32, 32);
+  background: linear-gradient(0deg, rgba(28, 32, 32, 1) 0%, rgba(28, 32, 32, 1) 75%, rgba(40, 45, 45, 1) 100%);
+  background-size: 100%;
+  background-repeat: repeat-x;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* HEADER */
+.pai {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  width: auto;
+  background-color: #282D2D;
+}
+
+.coluna2 {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Rancho';
+  font-weight: normal;
+  text-shadow: 2px 2px 0px rgb(0 0 0);
+  font-size: 3em;
+  text-align: center;
+  margin-top: -15px;
+  margin-left: 50px;
+}
+
+.coluna3 {
+  padding-right: 70px;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+
+header>p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  color: white;
+  max-width: 600px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: auto;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 315);
+
+}
+
+.navhr {
+  margin-top: -2px;
+}
+
+nav {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+nav>a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+
+.criarconta {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: white;
+  color: #282D2D;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+}
+
+.entrar {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: #282D2D;
+  ;
+  color: white;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+  margin-left: 15px;
+}
+
+/*filmes carrosel */
+
+.filmes-carrousel {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imagem-filmes {
+  width: 150px;
+  margin-right: 40px;
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+
+.carouselOfImages {
+  background-image: linear-gradient(to bottom, #222424, #282D2D, #222424);
+  overflow: visible;
+}
+
+.carouselImage {
+  width: 250px;
+  height: 250px;
+  margin-top: 65px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  transition: transform 0.5s;
+  transform: scale(1);
+}
+
+.carouselImage img {
+  height: 300px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.carouselImage.is-selected {
+  z-index: 10;
+  transform: scale(1.5);
+}
+
+.carouselImage.nextToSelected {
+  transform: scale(1.25);
+  z-index: 5;
+}
+
+/*! Flickity v2.0.5
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover {
+  background: white;
+}
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+.flickity-page-dots {
+
+  width: 100%;
+  bottom: -25px;
+  margin: 0;
+  padding-bottom: 10px;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+  background: #D84444;
+}
+
+
+footer {
+  background-color: rgb(173, 158, 158);
+  color: white;
+  text-align: center;
+  font-size: 0.8;
+  padding: 5px;
+}
+
+footer>p>a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+footer a:hover {
+  text-decoration: underline;
+
+}
+
+.footer {
+  padding-top: 50px;
+  padding-right: 900px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* LOGIN */
+
+
+h1.login {
+  color: white;
+  font-family: 'Rancho';
+  font-size: 40px;
+  font-weight: normal;
+  text-shadow: 2px 2px 0px rgb(0 0 0);
+  margin-top: 2%;
+  font-size: 4em;
+  text-align: center;
+}
+
+.teladelogin {
+  width: 27%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.input {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 80%;
+  padding: 3%;
+  margin-bottom: 2%;
+}
+
+.btnEntrar {
+  border-radius: 4px;
+  border: 1px solid #a9b1b1;
+  margin-left: 33%;
+  padding: 4%;
+  width: 40%;
+  align-items: center;
+}
+
+.btnEntrar:hover {
+  cursor: pointer;
+}
+
+.titleform h2 {
+  text-align: center;
+  justify-content: center;
+  color: #282D2D;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 23px;
+}
+
+.titleform {
+  padding: 0% 7%;
+}
+
+.title-btn {
+  font-size: 16px;
+}
+
+.ico-btn {
+  margin-right: 10%;
+}
+
+h3 {
+  text-align: center;
+  color: #757575;
+
+}
+
+hr {
+  width: 90%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.cadastrado {
+  bottom: 100px;
+}
+
+/*--------------------------------------------------*/
+
+/*TELA FILMES*/
+
+#fundofilme {
+  height: 400px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.poster1 {
+  width: 230px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.posterfilme {
+  display: inline-block;
+  width: 17%;
+}
+
+.detalhes {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.atores {
+  vertical-align: top;
+  display: inline-block;
+  width: 25%;
+}
+
+.txtelenco {
+  margin-bottom: 2%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-shadow: 1px 1px 10px#161616;
+  width: 90%;
+}
+
+.resumo {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  width: 90%;
+}
+
+.titulofilme {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 40px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.nomeator {
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-shadow: 1px 1px 10px#161616;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  background-color: #282D2D;
+  padding: 2px;
+  border-radius: 2px;
+  border: solid 1px #757575;
+
+}
+
+.titulooriginal {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+
+
+/* PERFIL -------------------------------------------------------------------------------------------- */
+
+.infoperfil {
+  margin-left: 15%;
+}
+
+.fotoperfil {
+  display: inline-block;
+}
+
+.nomeeditar {
+  display: inline-block;
+}
+
+.colunaperfil {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.colunaperfil button {
+  background-color: #282D2D;
+  border: 0;
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.colunaperfil button:hover {
+  background-color: #282D2D;
+  border: 0;
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #D84444;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.hrperfil {
+  width: 70%;
+  border: 0;
+  border-top: 2px solid #D84444;
+  margin-left: 15%;
+  margin-top: -1px;
+}
+
+#pesquisarfilmes {
+  border: 0;
+  padding: 7px;
+  background-color: #D84444;
+  border-radius: 3px;
+  margin-bottom: -10px;
+  height: 10%;
+  cursor: pointer;
+}
+
+#pesquisar {
+  border: 0;
+  padding: 7px;
+  background-color: #282D2D;
+  border-radius: 3px;
+  margin-bottom: -10px;
+  height: 10%;
+  cursor: pointer;
+}
+
+.formperfil {
+  margin-left: 15%;
+  width: 70%;
+}
+
+.listasperfil {
+  margin-left: 15%;
+  width: 70%;
+}
+
+/*TELA PERFIL NOTICIAS-----------------------------------------------------------------------------------*/
+
+.inputtit {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.inputtexto {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 95%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.inputdescr {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 95%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+#search {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.inputcat {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 55%;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.enviaimagem {
+  border: 1px solid white;
+  padding: 5%;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  height: 100px;
+  line-height: 100px;
+}
+
+.enviaimagem input {
+  display: none;
+}
+
+.enviaimagem label {
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+}
+
+#Envia {
+  border: 1px solid white;
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+.btnCriarNot {
+  margin-top: 5%;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #D84444;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+#imgnoticia {
+  width: 400px;
+  height: 250px;
+}
+
+#imagem {
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+}
+
+
+
+/* TELA FILMES LISTA --------------------------------------------------------------------------------*/
+#resultado li button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Roboto';
+  background-color: white;
+  cursor: pointer;
+}
+
+#resultado {
+  list-style-type: none;
+}
+
+#filmeselecionados {
+  list-style-type: none;
+}
+
+#resultado li {
+  width: 100%;
+}
+
+.resultadodiv {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+}
+
+
+.posterlista {
+  width: 80px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.posterfilmelista {
+  display: inline-block;
+}
+
+.detalheslista {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.titulofilmelista {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.resumolista {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.hreflista {
+  text-decoration: none;
+}
+
+.resumolista {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.titulooriginallista {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+#filmeselecionado {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto';
+  background-color: #282D2D;
+  border: 0;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+}
+
+.limparlista {
+  width: 40%;
+  margin-right: 5%;
+}
+
+#limpar {
+  margin-top: 5%;
+  border: 1px solid #D84444;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  color: #D84444;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+#excluirlista {
+  margin-top: 5%;
+  border: 1px solid #D84444;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  color: #D84444;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.inputnota {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 5%;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.posterlistapeqdiv {
+  display: inline-block;
+  margin-left: 10%;
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+.posterlistapeq {
+  width: 80px;
+  border-radius: 5px;
+  border: solid 1px white;
+  margin-left: -40px;
+}
+
+.titulolista {
+  margin-top: 1%;
+  margin-left: -40px;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+
+
+.descricaolista {
+  margin-left: -40px;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+
+.hrperfilcriar {
+  width: 70%;
+  border: 0;
+  border-top: 2px solid #D84444;
+  margin-left: 15%;
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+
+.titulolistasper {
+  margin-left: 2%;
+  margin-bottom: 3%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+/*TELA PESQUISA FILMES -------------------------------------------------------------------------------*/
+
+#fundofilme {
+  height: 400px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, rgb(40, 45, 45) 15%, rgba(0, 0, 0, 0.123) 80%), url("https://image.tmdb.org/t/p/original/p3JX4YPcJOCPp8MSjL6mg7ZhHgA.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.posterpesquisa {
+  width: 150px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.posterfilmepesquisa {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.detalhespesquisa {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.titulofilmepesquisa {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.resumopesquisa {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+.titulooriginalpesquisa {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.hrresultado {
+  width: 90%;
+  border-color: #757575;
+}
+
+.hrdiv {
+  color: #757575;
+  margin-left: 7%;
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.txthr {
+  margin-left: 5px;
+  margin-bottom: -35px;
+}
+
+.nota {
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 1%;
+  width: 40px;
+  border-radius: 5px;
+  border: solid 1px white;
+  background-color: rgb(212, 156, 0);
+  color: white;
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.vermais {
+  display: inline-block;
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: white;
+  color: #282D2D;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+  margin-top: 20%;
+  margin-left: 10px;
+
+}
+
+.painotaver {
+  display: flex;
+  width: 100%;
+}
+
+/* TELA NOTICIAS --------------------------------------------------------------------------------------------- */
+
+.imgnoticia {
+  width: 400px;
+  height: 250px;
+  object-fit: none;
+  object-position: 50% 50%;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.noticiali {
+  margin-left: 10%;
+  width: 80%;
+}
+
+.divnot {
+  display: flex;
+}
+
+.laddirnot {
+  display: inline-block;
+  width: 60%;
+
+}
+
+.ladesqnot {
+  display: inline-block;
+}
+
+.titulonoticia {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.previanot {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+
+.categoria {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: #D84444;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.continuelendo {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: white;
+  color: #282D2D;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+  margin-top: 5%;
+  margin-left: 2%;
+  cursor: pointer;
+
+}
+
+/* TELA NOTICIA ------------------------------------------------------------------------------- */
+
+.noticia {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.noticiaimg {
+  margin-top: 3%;
+  width: 1080px;
+  height: 350px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.ladesqnoticia {
+  display: inline-block;
+  width: 60%;
+}
+
+.laddirnotpeq {
+  margin-left: 10%;
+  display: inline-block;
+  width: 30%;
+}
+
+.noticiatexto {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.outrasnot {
+  margin-left: 2%;
+  margin-top: 3%;
+  vertical-align: top;
+  color: #757575;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.titulonotpeq {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 13px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.filmescom {
+  margin-left: 10%;
+  margin-right: 10%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.ultimasnot {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 28px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.btnCriarNotEditar {
+  margin-top: 5%;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #D84444;
+  width: 95%;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.btnExcluirEditar {
+  margin-top: 5%;
+  border: 1px solid #D84444;
+  border-radius: 4px;
+  background-color: white;
+  width: 95%;
+  color: #D84444;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.limparlistaeditar {
+  width: 30%;
+  margin-right: 5%;
+}
+
+.feitopor {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.titulofilmecri {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 22px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.titulooriginalcri {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.titulocritica {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.critica {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+  line-height: 25px;
+}
+
+.laddircripeq {
+  margin-left: 10%;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.outrascri {
+  margin-left: 2%;
+  margin-top: 3%;
+  vertical-align: top;
+  color: #D84444;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.posterlistapeqdivpesq {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.listasperfilpesq {
+  margin-top: 2%;
+  width: 100%;
+}
+
+.titulolistaspesq {
+  margin-left: 15%;
+  margin-bottom: 3%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.feitoporlist {
+  margin-left: -10%;
+  margin-bottom: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+
+.listapai {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* TELA LISTA UNICA ----------------------- */
+.posterlistapeqdivlist {
+  display: inline-block;
+  width: 60%;
+  margin-bottom: 5%;
+}
+
+.listapailis {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  border: solid 1px white;
+  padding-top: 2%;
+  padding-left: 2%;
+  margin-top: 3%;
+}
+
+.feitoporlisttela {
+  margin-bottom: 1%;
+  vertical-align: top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.posterlistapeqdivs {
+  display: inline-block;
+  width: 20%;
+  margin-bottom: 2%;
+}
+
+.posterlistatela {
+  width: 140px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.titulolistatela {
+  margin-top: 1%;
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+}
+
+.descricaolistatela {
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: 1px 1px 10px#161616;
+
+}
+
+.textonotpeq {
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align: top;
+  color: rgb(212, 212, 212);
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-shadow: 1px 1px 10px#161616;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/*TELA FILMESS--------------------------------------------------------------------------- */
+
+.textocarousel {
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-shadow: 1px 1px 10px#161616;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-bottom: 1%;
+
+}
+
+.Sobrenos {
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-shadow: 1px 1px 10px#161616;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-bottom: 1%;
+}
+
+.inputfilmes {
+  vertical-align: top;
+  font-family: 'Roboto';
+  color: white;
+  padding: 1px;
+  background-color: #222424;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  border-style: solid;
+  border: none;
+  border-width: 1px;
+  height: 80%;
+  border: 1px solid #cccccc;
+}
+
+.textosobre{
+  vertical-align: top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 1px 1px 10px#161616;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-bottom: 1%;
+  width: 90%;
+}

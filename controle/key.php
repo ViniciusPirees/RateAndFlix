@@ -1,0 +1,2 @@
+<?php
+define('APIKEY',""); //APIKEY
