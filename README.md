@@ -1,4 +1,7 @@
 # Rate and Flix
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ViniciusPirees/RateAndFlix/blob/main/README-EN.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/ViniciusPirees/RateAndFlix#readme)
+
 <h2>Projeto de conclusão de curso pela FATEC ITU no final do semestre em 2022</h2>
 
 Projeto feito utilizando HTML <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">, CSS <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">, JQuery   <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg">, PHP <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"> e MySQL <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">.
