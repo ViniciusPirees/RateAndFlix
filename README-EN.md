@@ -1,8 +1,7 @@
 # Rate and Flix
 <h2>Final course project by FATEC ITU at the end of the semester in 2022.</h2>
 
-Project made using HTML <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">, CSS <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">, JQuery   <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg">, PHP <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"> and MySQL <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">.
-//////////////////
+Project made using HTML <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">, CSS <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">, JQuery   <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg">, PHP <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"> and MySQL <img align="center" width='20' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
 The primary goal was to create a web platform dedicated to the realm of entertainment and pop culture, specifically movies. Users can swiftly share their reviews of recently watched or long-time favorites, leaving behind their personal critique for others to read and determine whether or not to give the movie a chance. Additionally, the platform offers suggestions for similar movies and series, as well as the latest news in entertainment and pop culture.
 
 The site was developed with the TMDB API, where we can search for information on all movies in the database, which is the main focus of the project. 
@@ -42,7 +41,7 @@ It presents the list of movies created by a registered user along with the lates
 <img src="https://github.com/ViniciusPirees/RateAndFlix/blob/main/gifs/cadastro.jpg" width="490" height="300"/>
 </div>
 <br>
-On the registration page, some information is requested to be stored in the database, and on the login screen, the system searches for the corresponding user for account access.//////
+On the registration page, some information is requested to be stored in the database, and on the login screen, the system searches for the corresponding user account for access.
 
 <br>
 <h3>Profile (News Creation)</h3>
